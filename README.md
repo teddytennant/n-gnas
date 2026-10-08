@@ -4,14 +4,17 @@ JAX core of N-GNAS, node-level graph neural architecture search, arXiv 2610.0929
 
 The core builds stage-I node scores, gates node features with a soft mix of those scores, mixes two operator stand-ins with a residual DARTS weight, and adds binary cross-entropy to a contrastive loss. Search exposes softmax over operators and argmax discretize.
 
-## Tests
+## Install
 
-Synthetic graphs only. CPU is enough. From this directory:
+```bash
+pip install -e .
+```
 
-    export LD_LIBRARY_PATH="/nix/store/larys5yihddj2diyab60hpdri8n11kn7-ld-library-path/share/nix-ld/lib:/nix/store/ab3753m6i7isgvzphlar0a8xb84gl96i-gcc-15.2.0-lib/lib:/nix/store/2kdz3m7ic8w226pcvkz1dlg169v91p6a-zlib-1.3.2/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-    /home/nixos/arxiv-impl-work/.venv/bin/python -m pytest -q
+## Run
 
-pytest uses `pythonpath = ["src"]` from pyproject.toml. Do not install this package into the shared venv.
+```bash
+JAX_PLATFORMS=cpu python -m pytest -q
+```
 
 ## Mismatches
 
