@@ -16,6 +16,8 @@ pip install -e .
 JAX_PLATFORMS=cpu python -m pytest -q
 ```
 
+H200 smoke is `train.sbatch` plus `smoke_gpu.py`: 20 Adam steps of the search loss on a 4-node graph. Job 759285 on compute-gpu-01, jax 0.11.1 CudaDevice(id=0), loss 0.207747 to 0.175477, exit 0.
+
 ## Mismatches
 
 No CiteSeer, Cora, or other graph dataset is loaded, and there are no accuracy numbers.
