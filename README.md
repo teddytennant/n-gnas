@@ -1,6 +1,6 @@
 # n-gnas
 
-JAX core of N-GNAS, node-level graph neural architecture search, arXiv 2610.09297. Authors: Lintao Yanga, Sirui Lia, Yaqing Wang, Pietro Lio, Xu Shen, Baisong Liu, Chengbin Peng.
+JAX core of N-GNAS, node-level graph neural architecture search, arXiv 2610.09297. Authors: Lintao Yanga, Sirui Lia, Yaqing Wang, Pietro Liò, Xu Shen, Baisong Liu, Chengbin Peng.
 
 The core builds stage-I node scores, gates node features with a soft mix of those scores, mixes two operator stand-ins with a residual DARTS weight, and adds binary cross-entropy to a contrastive loss. Search exposes softmax over operators and argmax discretize.
 
