@@ -1,0 +1,9 @@
+[project]
+name = "n-gnas"
+version = "0.1.0"
+description = "Node-level graph neural architecture search core (arXiv 2610.09297)"
+requires-python = ">=3.11"
+dependencies = ["jax>=0.4"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
